@@ -3,7 +3,7 @@
 Moodle Downloader is a python script created for easily downloading moodle course pages.
 You need to have the credentials and the url to the course page which you want to download.
 The program will login to moodle and visit the course page.
-All files at the course page will be downloaded to a Download directory next to the python file.
+All files at the course page will be downloaded to your HOME/Download  directory
 
 ## Installation
 

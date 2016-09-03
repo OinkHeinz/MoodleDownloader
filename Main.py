@@ -5,6 +5,7 @@ import sys  # for setting encoding
 from sys import stdin				#For reading Userinput from STDIN
 import getpass # for reading password from stdin
 import os # for writing file to disk
+from os.path import expanduser # for getting the home directory
 
 import requests # for making HTTP requests
 from bs4 import BeautifulSoup # for parsing html
@@ -50,7 +51,7 @@ def createDirectory(sDirectoryPath):
 	:param sDirectoryPath: the path to the new directory
 	:return: the path to the directory
 	"""
-	sDirectoryPath = os.path.join(os.path.dirname(os.path.realpath(__file__)), "Downloads" + os.sep + sDirectoryPath)
+	sDirectoryPath = os.path.join(expanduser("~"), "Downloads" + os.sep + sDirectoryPath)
 	if not os.path.exists(sDirectoryPath):
 		os.makedirs(sDirectoryPath)
 	return sDirectoryPath
